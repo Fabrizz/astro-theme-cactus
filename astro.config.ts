@@ -10,6 +10,8 @@ import remarkUnwrapImages from "remark-unwrap-images";
 
 import { expressiveCodeOptions } from "./src/site.config";
 import { remarkReadingTime } from "./src/utils/remark-reading-time";
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
 
 // https://astro.build/config
 export default defineConfig({
@@ -35,8 +37,9 @@ export default defineConfig({
 					target: "_blank",
 				},
 			],
+			rehypeKatex
 		],
-		remarkPlugins: [remarkUnwrapImages, remarkReadingTime],
+		remarkPlugins: [remarkUnwrapImages, remarkReadingTime, remarkMath],
 		remarkRehype: {
 			footnoteLabelProperties: {
 				className: [""],

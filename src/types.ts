@@ -13,6 +13,7 @@ export interface SiteConfig {
 		link: string;
 		pingback?: string;
 	};
+	loadKaTexFontsOnClient: boolean;
 }
 
 export interface PaginationLink {
